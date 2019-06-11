@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: registry
+
+server:
+  port: 8761
+
+#настройка для дискавери сервера(здесь регистрируются все микросервисы, благодаря чему знают друг о друге и могут
+#общаться между собой)
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  server:
+    enable-self-preservation: false
